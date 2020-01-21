@@ -8,7 +8,7 @@ function App() {
         <header className="App-header">
           <h1>Fizz-Buzz</h1>
         </header>        
-        <FizzBuzzPrinter number={1}/>
+        <FizzBuzzPrinter number={"3"}/>
       </div>
     );
 }
