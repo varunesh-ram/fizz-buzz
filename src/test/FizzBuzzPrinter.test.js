@@ -39,4 +39,9 @@ describe(("<FizzBuzzPrinter/> component"), () => {
         expect(wrapper.find('label').text()).toBe("Fizz");
         expect(wrapper.instance().props.number).toBe("6");
     });
+    it("should print Buzz for prop number passed as 10", () => {
+        let wrapper = shallow(<FizzBuzzPrinter number="10"/>);
+        expect(wrapper.find('label').text()).toBe("Buzz");
+        expect(wrapper.instance().props.number).toBe("10");
+    });
 });
