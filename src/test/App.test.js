@@ -17,6 +17,10 @@ describe(("<App/> component"), () => {
   });
 
 it("should load FizzBuzzPrinter component", () => {
-  expect(wrapper.find(FizzBuzzPrinter)).toBeDefined();
+    expect(wrapper.find(FizzBuzzPrinter)).toBeDefined();
+  });
+
+it("should print 1 to 100", () => {
+    expect(wrapper.find(FizzBuzzPrinter).length).toBe(100);
   });
 });
