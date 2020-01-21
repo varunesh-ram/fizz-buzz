@@ -4,7 +4,7 @@ export default class FizzBuzzPrinter extends React.Component {
     render = () => {
         return  (<div>
             <form>
-            <label >1</label>                
+            <label >{this.props.number}</label>                
             </form>
         </div>);
     }        
