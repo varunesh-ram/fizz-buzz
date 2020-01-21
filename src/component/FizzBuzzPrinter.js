@@ -2,13 +2,15 @@ import React from 'react';
 
 export default class FizzBuzzPrinter extends React.Component {
     printFizzBuzz = () => {
-        if (this.props.number % 3 === 0 && this.props.number % 5 === 0)
-            return "FizzBuzz"; 
-        if (this.props.number % 3 === 0)
-            return "Fizz";
-        if (this.props.number % 5 === 0)
-            return "Buzz";  
-        return this.props.number;
+        let print = [];
+        if (this.isDivisibleBy(3))
+            print.push("Fizz");
+        if (this.isDivisibleBy(5))
+            print.push("Buzz");  
+        return print.length === 0 ? this.props.number : print ;
+    }
+    isDivisibleBy = (number) => {
+        return this.props.number % number === 0;
     }
     render = () => {
         return  (<div>
